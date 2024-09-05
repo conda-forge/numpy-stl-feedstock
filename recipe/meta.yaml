@@ -1,6 +1,6 @@
 {% set name = "numpy-stl" %}
-{% set version = "3.1.1" %}
-{% set sha256 = "f78eea62c80938bf53ea914fa5b6c92f448f0eab5609e0e5a737dde039404334" %}
+{% set version = "3.1.2" %}
+{% set sha256 = "72b46950dfa3642df1c7b873cfa78a548533724b907478c567db42fdf57ee3d2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - stl = stl.main:main
