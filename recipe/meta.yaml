@@ -37,7 +37,6 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - python-utils
-    - enum34  # [py2k]
 
 test:
   imports:
