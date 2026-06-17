@@ -1,6 +1,6 @@
 {% set name = "numpy-stl" %}
-{% set version = "3.2.0" %}
-{% set sha256 = "5a20c3f79cddaa0abc6a4b99f5486aceed4f88152f29b19a57acc844e183fd4d" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "086579c101fb2df9fb2594db7074728345710c931265cfdae4a50ed8d59d2f7e" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - stl = stl.main:main
