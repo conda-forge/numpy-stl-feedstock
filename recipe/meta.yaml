@@ -1,6 +1,6 @@
 {% set name = "numpy-stl" %}
-{% set version = "4.1.0" %}
-{% set sha256 = "dd4eccf3191dc68b4d8cb02ec7bc1623aaaac4deab3fe7612ea0ea7b0e721e4f" %}
+{% set version = "4.1.3" %}
+{% set sha256 = "2820f64ba63283bfe56081f36eb9089196141d08eb5e00ecd1ba50ce78eee107" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - uv-build >=0.11,<0.12
+    - uv-build >=0.11,<1
   run:
     - python >={{ python_min }}
     - numpy >=1.24
